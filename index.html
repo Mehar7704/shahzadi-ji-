@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Respectful Note | Mehar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #f8fafc;
+        }
+
+        .card-container {
+            background: rgba(30, 41, 59, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            width: 100%;
+            max-width: 500px;
+            padding: 35px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-container::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 150px;
+            height: 150px;
+            background: rgba(56, 189, 248, 0.15);
+            border-radius: 50%;
+            z-index: 0;
+            filter: blur(40px);
+        }
+
+        .header-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            position: relative;
+            z-index: 1;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 12px;
+        }
+
+        .live-clock {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .sender-tag {
+            background: rgba(56, 189, 248, 0.15);
+            color: #38bdf8;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .main-heading {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .message-box {
+            background: rgba(15, 23, 42, 0.5);
+            border-left: 4px solid #38bdf8;
+            padding: 20px;
+            border-radius: 0 12px 12px 0;
+            text-align: left;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #e2e8f0;
+        }
+
+        .funny-section {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px dashed rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 18px;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .funny-title {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin-bottom: 10px;
+        }
+
+        .nickname-display {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #38bdf8;
+            margin-bottom: 12px;
+            min-height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .fun-btn {
+            background: linear-gradient(135deg, #0284c7, #0369a1);
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+        }
+
+        .fun-btn:hover {
+            background: linear-gradient(135deg, #0369a1, #075985);
+            transform: translateY(-2px);
+        }
+
+        .footer-note {
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <div class="header-info">
+            <div class="live-clock">
+                <i class="fa-regular fa-clock"></i>
+                <span id="timeDisplay">00:00:00</span>
+            </div>
+            <div class="sender-tag">
+                <i class="fa-solid fa-user-graduate"></i> From: Mehar
+            </div>
+        </div>
+
+        <div class="badge">
+            <i class="fa-solid fa-shield-halved" style="color: #38bdf8;"></i> Pure Respect & Classmate Note
+        </div>
+
+        <h1 class="main-heading">Acknowledge & Regards</h1>
+
+        <div class="message-box">
+            "No need for thanks at all! Aapki izzat aur respect humesha sar-ankhon par hai. Aage bhi jab zaroorat ho, be-jhijhak keh dijiyega."
+        </div>
+
+        <div class="funny-section">
+            <div class="funny-title"><i class="fa-solid fa-face-laugh-wink"></i> Classmate Secret Title Vault</div>
+            <div id="nicknameDisplay" class="nickname-display">Click button to reveal class titles! 🕵️‍♂️</div>
+            <button class="fun-btn" onclick="revealNextNickname()">Check Title</button>
+        </div>
+
+        <div class="footer-note">
+            Maintained with high mutual respect & friendly banter.
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+            const strHours = String(hours).padStart(2, '0');
+            
+            document.getElementById('timeDisplay').innerText = `${strHours}:${minutes}:${seconds} ${ampm}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        const nicknames = [
+            "😎 The Ultimate Don",
+            "⚡ Banda Maar (Strict Warning!)",
+            "👻 Friendly Neighborhood Churail",
+            "📚 The Class Topper / Legend"
+        ];
+        let currentIndex = 0;
+
+        function revealNextNickname() {
+            const display = document.getElementById('nicknameDisplay');
+            display.style.opacity = 0;
+            setTimeout(() => {
+                display.innerText = nicknames[currentIndex];
+                display.style.opacity = 1;
+                currentIndex = (currentIndex + 1) % nicknames.length;
+            }, 200);
+        }
+    </script>
+</body>
+</html>
